@@ -26,16 +26,28 @@ export default function GithubButton(){
     const navigate = useNavigate();
     const onClick = async() =>{
         try{
-            const provider = new GithubAuthProvider();
-            await signInWithPopup(auth, provider);
+            const githubprovider = new GithubAuthProvider();
+            await signInWithPopup(auth, githubprovider);
+            
             navigate("/");
         } catch(error){
             console.log(error);
         }
     }
+
+    /*const onClickGoogle = async() =>{
+        try{
+            const googleprovider = new GoogleAuthProvider();
+            await signInWithPopup(auth, googleprovider);
+            navigate("/");
+        } catch(error){
+            console.log(error);
+        }
+    }*/
     return (
-    <Button onClick={onClick}>
-        <Logo src="/github-logo.svg"/>
-        Continue with Github
-    </Button>);
+        <Button onClick={onClick}>
+            <Logo src="/github-logo.svg"/>
+            Continue with Github
+        </Button>
+    );
 }
