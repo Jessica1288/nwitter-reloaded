@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# Tweet Clone Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a clone of a popular social media platform, Twitter. It utilizes various technologies and features to mimic the functionalities of the original platform. The project primarily leverages Firebase for backend services including Cloud Firestore, Firebase Authentication, and Google Cloud Storage.
 
-Currently, two official plugins are available:
+## Technologies Used
+- Firebase: Realtime Database, Cloud Firestore, Authentication
+- Google Cloud Storage: For file storage
+- NoSQL: Utilized for database management
+- Realtime Updates: Enabled through Firebase Realtime Database
+- Query and Filter: Implemented using Firebase Firestore querying capabilities
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Features
+- **Authentication:**
+  - Supports authentication via email, Google, and GitHub accounts.
+- **Tweet CRUD Operations:**
+  - Users can create, read, update, and delete tweets.
+- **Protected Pages:**
+  - Certain pages are protected and accessible only to authenticated users.
+- **Profile Page:**
+  - Users have their own profile page where they can view and manage their tweets.
+- **File Upload:**
+  - Capability to upload files, stored in Google Cloud Storage.
+- **API Key Security:**
+  - Ensures the security of API keys used in the project.
